@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="my_app_primary_color">#F47420</color>
+    <color name="my_app_secondary_color">#323232</color>
+    <color name="my_app_background_color">#121212</color>
+    <color name="my_app_error_color">#FC5A5A</color>
+
+    <!--Color Accents-->
+    <color name="colorAccentLight">#F47420</color>
+
+    <!--Edittext Appearance Colors-->
+    <color name="textColorPrimaryDark">#E2E2E2</color>
+    <color name="edittTextBackground">#99161616</color>
+    <color name="edittextHintColor">#F5811F</color>
+
+    <!--Buttons Appearance Colors-->
+    <color name="buttonTextColors">#121212</color>
+    <color name="buttonBackgroundLight">#F47420</color>
+</resources>

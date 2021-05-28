@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.rmj.guanzongroup.integsys">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MaterialTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".Activity.Activity_Help"
+            android:screenOrientation="userPortrait"
+            tools:ignore="InnerclassSeparator,LockedOrientationActivity" />
+        <activity
+            android:name=".Activity.Activity_LoadAsset"
+            android:screenOrientation="userPortrait"
+            tools:ignore="InnerclassSeparator,LockedOrientationActivity" />
+        <activity
+            android:name=".Activity.Acitivity_Customer_Inquiry"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.Activity_DailyCollection"
+            android:screenOrientation="userPortrait"
+            android:windowSoftInputMode="adjustNothing"
+            tools:ignore="InnerclassSeparator,LockedOrientationActivity" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="userPortrait"
+            tools:ignore="InnerclassSeparator,LockedOrientationActivity" />
+        <activity
+            android:name=".Activity.Activity_Splash"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Services.MessagingService"
+            tools:ignore="ExportedService,InnerclassSeparator">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".Services.IntegSys_ServiceProvider"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            tools:ignore="InnerclassSeparator" />
+
+        <receiver
+            android:name=".Services.ConnectionStatusReceiver"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Services.LoginActionReceiver"
+            tools:ignore="InnerclassSeparator">
+            <intent-filter>
+                <action android:name="android.intent.action.INTEGSYS_SUCCESS_LOGIN" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="org.rmj.g3appdriver.utils.G3AppFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:value="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

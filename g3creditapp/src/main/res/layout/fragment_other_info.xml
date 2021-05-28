@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Other.Fragment_OtherInfo"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OTHER INFORMATION"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="#F88222"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText" />
+
+            <!---->
+            <LinearLayout
+                android:id="@+id/linear_otherInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Who will use the unit?"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_unitUser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_cap_sUsr2buyr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Purpose of buying the unit"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_purposeOfBuying"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Who will shoulder the monthly payment"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_monthlyPayer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_cap_sPyr2Buyr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="How you know about us?"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_source"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_CompanyInfoSource"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Specify how did you know about us?"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_CompanyInfoSource"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLength="30"
+                        android:nextFocusForward="@id/tie_cap_refereceContact"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <!---->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PERSONAL REFERENCES"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="#F88222"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/linear_references"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_referenceName"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_referenceName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="100"
+                        android:nextFocusForward="@id/tie_cap_refereceContact"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_referenceContact"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_refereceContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number|none"
+                        android:maxLength="11"
+                        android:nextFocusForward="@id/tie_cap_refereceAddress"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_referenceAddress"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phase#/Lot#/Sitio/Street/Barangay"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_refereceAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="100"
+                        android:nextFocusForward="@id/tie_cap_referenceAddProv"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="RtlSymmetry" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="DisableBaselineAlignment">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_referenceAddProv"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/hinti_creditApp_province"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tie_cap_referenceAddProv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textAutoComplete|textAutoCorrect"
+                            android:maxLength="20"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@id/tie_cap_referenceAddTown"
+                            android:textColor="@color/creditApp_editTextColor"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_referenceAddTown"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:hint="@string/hint_creditApp_town"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/tie_cap_referenceAddTown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textAutoComplete|textAutoCorrect"
+                            android:maxLength="20"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:imeOptions="actionDone"
+                            android:textColor="@color/creditApp_editTextColor"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_others_addReference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="@color/creditApp_colorAccent"
+                    android:textColor="@color/creditApp_editTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Add Reference"
+                    tools:targetApi="lollipop"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_references"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_others_prevs"
+                    style="@style/CreditAppButtonPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_previous" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_others_next"
+                    style="@style/CreditAppButtonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_next" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

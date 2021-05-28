@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/CreditAppMaterialTheme"
+    android:orientation="vertical"
+    tools:context=".Fragment.Personal.Fragment_PersonalInfo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F88222"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="@string/header_creditApp_ApplicantInfo"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_lastname"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_creditApp_lastName"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="50"
+                        android:nextFocusForward="@id/tie_cap_firstname"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_firstname"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/hint_creditApp_firstName"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="50"
+                        android:nextFocusForward="@id/tie_cap_suffix"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_suffix"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:hint="@string/hint_creditApp_suffix"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tie_cap_suffix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="4"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:paddingLeft="10dp"
+                        android:paddingStart="10dp"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        android:nextFocusForward="@id/tie_cap_middname"
+                        android:textColor="@color/creditApp_editTextColor"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_middname"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".8"
+                    android:hint="@string/hint_creditApp_middName"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_middname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="50"
+                        android:nextFocusForward="@id/tie_cap_nickname"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_nickname"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:hint="@string/hint_creditApp_nickName"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="20"
+                        android:nextFocusForward="@id/tie_cap_applBirthdate"
+                        android:textColor="@color/creditApp_editTextColor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--Birth Info
+            ****************
+            ****************-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:text="@string/header_creditApp_birthdayInfo"
+                android:textColor="@color/creditApp_headerTextColor" />
+
+            <!--Birth Info Fiel Input
+            ***************************
+            ***************************-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_applBirthdate"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/creditApp_colorAccent"
+                android:hint="Birthdate(Day/Month/Year)"
+                tools:ignore="HardcodedText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_applBirthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:nextFocusForward="@id/autoComplete_applBpProvince"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="HardcodedText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:text="BIRTH PLACE"
+                android:textColor="@color/creditApp_headerTextColor"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_applBirthProv"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:hint="@string/hinti_creditApp_province"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoComplete_applBpProvince"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:completionThreshold="1"
+                        android:imeOptions="actionNext"
+                        android:digits="@string/free_text_restriction"
+                        android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:nextFocusForward="@id/autoComplete_applBpTown"
+                        android:padding="14dp"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_applBirthTown"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:hint="@string/hint_creditApp_town"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoComplete_applBpTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:completionThreshold="1"
+                        android:imeOptions="actionNext"
+                        android:digits="@string/free_text_restriction"
+                        android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:nextFocusForward="@id/tie_cap_applNtnlty"
+                        android:padding="14dp"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--Status Info Field and Input
+            ********************************
+            ********************************-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <!--Gender Info
+                ****************
+                ****************-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/creditApp_infoHeaderBackground"
+                        android:padding="10dp"
+                        android:text="@string/header_creditApp_gender"
+                        android:textColor="@color/creditApp_headerTextColor" />
+
+                    <RadioGroup
+                        android:id="@+id/radiogroup_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_cap_genderMale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/hint_creditApp_male"
+                            android:textColor="@color/creditApp_editTextColor" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_cap_genderFemale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/hinti_creditApp_female"
+                            android:textColor="@color/creditApp_editTextColor" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_cap_genderLGBT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/hinti_creditApp_LGBT"
+                            android:textColor="@color/creditApp_editTextColor" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <!--Civil Status Info
+                *********************
+                *********************-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/creditApp_infoHeaderBackground"
+                        android:padding="10dp"
+                        android:text="@string/header_creditApp_civilStat"
+                        android:textColor="@color/creditApp_headerTextColor" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_civilStats"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        app:backgroundTint="@color/creditApp_colorPrimaryDark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lbl_genderErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please select gender"
+                android:textColor="@color/creditApp_errorMessage"
+                android:gravity="center"
+                tools:ignore="HardcodedText"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/lbl_CvlStatErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please select gender"
+                android:textColor="@color/creditApp_errorMessage"
+                android:gravity="center"
+                tools:ignore="HardcodedText"
+                android:visibility="gone"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_singleFullName"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_maidenName"
+                android:textColorHint="@color/creditApp_colorAccent"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_singleFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:maxLength="20"
+                    android:nextFocusForward="@id/tie_cap_firstname"
+                    android:textColor="@color/creditApp_editTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_applNtnlty"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_nationality"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tie_cap_applNtnlty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="14dp"
+                    android:completionThreshold="1"
+                    android:nextFocusForward="@id/tie_cap_motherName"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_motherName"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_mothername"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_motherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:digits="@string/free_text_restriction"
+                    android:nextFocusForward="@id/tie_cap_primaryContactNo"
+                    android:textColor="@color/creditApp_editTextColor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Contact Info
+            ******************
+            ******************-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:text="@string/header_creditApp_contact"
+                android:textColor="@color/creditApp_headerTextColor" />
+
+            <!--Contact Info Field
+            ************************
+            ************************-->
+            <LinearLayout
+                android:id="@+id/linear_contactInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingStart="5dp"
+                    tools:ignore="RtlSymmetry">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".8"
+                        android:text="Number of Contact :"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_NoOfContacts"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_primaryContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_primaryContactNo"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:hint="Contact No."
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_primaryContactNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_PrimaryCntctStats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:padding="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_primaryCntctPlan"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:hint="Length of use"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_primaryCntctPlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_secondaryContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_secondaryContactNo"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:hint="Contact No."
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_secondaryContactNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_secondaryCntctStats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:padding="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_secondaryCntctPlan"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:hint="Length of use"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_secondaryCntctPlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/tie_cap_secondaryContactNo"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_tertiaryContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_tertiaryContactNo"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:hint="Contact No."
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_tertiaryContactNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/tie_cap_applTelNo"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_tertiaryCntctStats"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:padding="5dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_tertiaryCntctPlan"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:hint="Length of use"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_tertiaryCntctPlan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:nextFocusForward="@id/tie_cap_secondaryContactNo"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_compContactNo"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_telephoneNo"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_applTelNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|none"
+                    android:maxLength="7"
+                    android:maxLines="1"
+                    android:nextFocusForward="@id/tie_cap_emailadd"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="TooManyViews" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_emailadd"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_EmailAdd"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_emailadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:nextFocusForward="@id/tie_cap_facebookacc"
+                    android:textColor="@color/creditApp_editTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_facebookacc"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_facebookAcc"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_facebookacc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="30"
+                    android:textColor="@color/creditApp_editTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_viberAcc"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_viberAcc"
+                android:textColorHint="@color/creditApp_colorAccent"
+                tools:ignore="TooManyViews">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_viberAcc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|none"
+                    android:maxLength="11"
+                    android:textColor="@color/creditApp_editTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_intro_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CreditAppButtonNext"
+                    android:text="@string/btn_creditApp_next"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

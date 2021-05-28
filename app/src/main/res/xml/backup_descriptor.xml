@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Remove the following "exclude" elements to make them a part of the auto backup -->
+    <exclude
+        domain="database"
+        path="GGC_ISysDBF" />
+    <!-- Exclude the shared preferences file that contains the GCM registrationId -->
+    <exclude
+        domain="sharedpref"
+        path="DataMessage.xml" />
+    <exclude
+        domain="sharedpref"
+        path="Temp_Data.xml" />
+    <exclude
+        domain="sharedpref"
+        path="GuanzonApps.xml" />
+</full-backup-content>

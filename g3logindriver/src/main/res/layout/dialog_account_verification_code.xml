@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#e2e2e2"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACCOUNT ACTIVATION"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="16sp"
+            android:textColor="@color/textColorPrimaryDark"
+            android:background="#161616"
+            android:gravity="center_horizontal"
+            android:paddingTop="7sp"
+            android:paddingBottom="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:paddingHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_weight=".5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_weight="1.7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_enter_pin"
+                    android:adjustViewBounds="true"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <LinearLayout
+                    android:layout_weight=".3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/lbl_dialog_activation_msg"
+                        android:layout_weight=".90"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/buttonTextColors"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/dialog_msg_account_confirm1"
+                        android:textSize="14sp"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:weightSum="2"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/txt_dialog_confirm_PIN"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Confirmation PIN"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="50dp"
+                    android:textColorHint="@color/buttonTextColors"
+                    android:textColor="@color/buttonTextColors"
+                    android:inputType="number|none"/>
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/btn_dialogActivate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/DialogMaterialButton"
+                    android:text="ACTIVATE ACCOUNT"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

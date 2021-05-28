@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#e0e0e0"
+    app:cardMaxElevation="5dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_list_ccTransNox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="000000000000"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/lbl_list_ccDateCreated"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="December 10, 2019"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lbl_list_ccRequestName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Doe Jane MIS"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_regular"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/lbl_list_ccDateSent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="December 10, 2019"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="end"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_list_ccSentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sent"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/roboto_regular"
+            tools:ignore="HardcodedText"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

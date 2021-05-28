@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.Spouse.Fragment_Spouse"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/header_creditApp_spouseInfo"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="20sp"
+        android:textColor="@color/creditApp_headerTextColor"
+        android:padding="10dp"
+        android:background="#F88222"
+        tools:targetApi="jelly_bean" />
+
+    <org.rmj.androidprojects.guanzongroup.g3creditapp.Etc.NonSwipeableViewPager
+        android:id="@+id/viewpager_spouseInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

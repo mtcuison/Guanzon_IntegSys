@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="MaterialTheme.CashCount" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/Black</item>
+        <item name="colorAccent">@color/Orange</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:windowBackground">@color/windowBakcground</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_regular</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="MaterialTheme.PopupOverlay">
+        <item name="android:textColorPrimary">@color/White</item>
+        <item name="colorControlNormal">@color/White</item>
+    </style>
+
+    <style name="MaterialTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColorPrimary">@color/White</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextInputLayout.CashCount" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <style name="HintText">
+        <item name="android:textColor">@color/Orange</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_regular</item>
+    </style>
+
+</resources>

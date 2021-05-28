@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="ntf_colorPrimary">#1B1B1B</color>
+    <color name="ntf_colorPrimaryDark">#000000</color>
+    <color name="ntf_colorAccent">#F88222</color>
+    <color name="ntf_windowBackground">#101010</color>
+    <color name="ntf_textColorPrimary">#000000</color>
+    <color name="ntf_editTextColor">#000000</color>
+    <color name="ntf_editTextHintColor">#80121214</color>
+    <color name="ntf_headerTextColor">#FFFFFF</color>
+    <color name="ntf_infoHeaderBackground">#2b2b2b</color>
+    <color name="ntf_errorMessage">#AF001F</color>
+    <color name="ntf_sentStat">#0F8600</color>
+
+    <color name="colorAccent">#F47420</color>
+    <color name="unReadNotification">#202020</color>
+    <color name="readNotification">@android:color/transparent</color>
+</resources>

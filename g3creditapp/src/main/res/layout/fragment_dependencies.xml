@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:theme="@style/CreditAppMaterialTheme"
+    tools:context=".Fragment.Disbursement.Fragment_Dependencies">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F88222"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="10dp"
+            android:text="Child/Dependent Information"
+            android:textColor="@color/creditApp_headerTextColor"
+            android:textSize="20sp"
+            tools:targetApi="jelly_bean"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_dependencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:stackFromEnd="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/label_creditApp_addDepedent_instruction"
+            android:textColor="@color/creditApp_editTextColor"
+            android:gravity="center"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_dpdFullname"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_dpdFullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="150"
+                        android:nextFocusForward="@id/tie_cap_dpdAge"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical">
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_dpdRelation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="14dp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_dpdAge"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:hint="Age"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_dpdAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:nextFocusForward="@id/tie_cap_firstname"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!--Insert Header or divider here...
+                must identify the division for another
+                type of field-->
+
+                <RadioGroup
+                    android:id="@+id/rg_cap_dpdStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:text="Is dependent a student?"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_cap_dpdStudentYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/label_creditApp_answerYes"
+                        tools:targetApi="jelly_bean" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:text="@string/label_creditApp_answerNo"
+                        android:fontFamily="@font/roboto_regular"
+                        tools:targetApi="jelly_bean"/>
+                </RadioGroup>
+
+                <!--Student dependency Info field...
+                **************************************-->
+                <LinearLayout
+                    android:id="@+id/linear_dpdStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/rg_cap_dpdSchoolType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_cap_dpdSchoolPublic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Public"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cap_dpdSchoolPrivate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Private"
+                            tools:ignore="HardcodedText" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <Spinner
+                            android:id="@+id/spinner_cap_eduElvel"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_cap_dpdScholar"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Scholar"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_dpdSchoolName"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="School Name"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_dpdSchoolName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:digits="@string/free_text_restriction"
+                            android:nextFocusForward="@id/tie_cap_dpdSchoolAddress"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_dpdSchoolAddress"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="School Address"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_dpdSchoolAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:digits="@string/free_text_restriction"
+                            android:nextFocusForward="@id/tie_cap_dpdSchoolProv"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Province and Town InputI field-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_cap_dpdSchoolProv"
+                            style="@style/CreditApp_TextInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/hinti_creditApp_province"
+                            android:textColorHint="@color/creditApp_colorAccent">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_cap_dpdSchoolProv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="20"
+                                android:padding="14dp"
+                                android:textColor="@color/creditApp_editTextColor"
+                                tools:ignore="LabelFor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_cap_dpdSchoolTown"
+                            style="@style/CreditApp_TextInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/hint_creditApp_town"
+                            android:textColorHint="@color/creditApp_colorAccent">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/tie_cap_dpdSchoolTown"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeOptions="actionDone"
+                                android:inputType="textCapWords"
+                                android:maxLength="20"
+                                android:padding="14dp"
+                                android:nextFocusForward="@id/tie_cap_firstname"
+                                android:textColor="@color/creditApp_editTextColor"
+                                tools:ignore="LabelFor" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_cap_dpdEmployed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:text="Is dependent employed?"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_cap_dpdEmployedYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:text="@string/label_creditApp_answerYes"
+                        android:fontFamily="@font/roboto_regular"
+                        tools:targetApi="jelly_bean"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_cap_dpdEmployedNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="@string/label_creditApp_answerNo"
+                        tools:targetApi="jelly_bean" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/linear_dpdEmployed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RadioGroup
+                        android:id="@+id/rg_cap_dpdEmployedSector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <RadioButton
+                            android:id="@+id/rb_cap_dpdEmployedPublic"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Public"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cap_dpdEmployedPrivate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Private"
+                            tools:ignore="HardcodedText" />
+
+                        <RadioButton
+                            android:id="@+id/rb_cap_dpdEmployedSelf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Self Employed"
+                            tools:ignore="HardcodedText" />
+
+                    </RadioGroup>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_dpdCompanyName"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_creditApp_compName"
+                        android:textColorHint="@color/creditApp_colorAccent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_dpdCompanyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:digits="@string/free_text_restriction"
+                            android:textColor="@color/creditApp_editTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_Dependent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dependent."
+                        tools:ignore="HardcodedText"
+                        android:fontFamily="@font/roboto_regular"
+                        tools:targetApi="jelly_bean" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_HouseHold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="House Hold."
+                        tools:ignore="HardcodedText"
+                        android:fontFamily="@font/roboto_regular"
+                        tools:targetApi="jelly_bean" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_Married"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Married."
+                        tools:ignore="HardcodedText"
+                        android:fontFamily="@font/roboto_regular"
+                        tools:targetApi="jelly_bean" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_dependency_addDependent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="@color/creditApp_colorAccent"
+                    android:textColor="@color/creditApp_editTextColor"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Add Child/Dependent"
+                    tools:targetApi="lollipop"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:id="@+id/linear_navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_fragment_dependency_prevs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
+                        app:cornerRadius="10dp"
+                        android:backgroundTint="@color/creditApp_colorAccent"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/btn_creditApp_previous"
+                        tools:targetApi="lollipop"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_margin="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_fragment_dependency_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        app:cornerRadius="10dp"
+                        android:backgroundTint="@color/creditApp_colorAccent"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="@string/btn_creditApp_next"
+                        tools:targetApi="lollipop"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="40dp"
+                        android:layout_margin="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

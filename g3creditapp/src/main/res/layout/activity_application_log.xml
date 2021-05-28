@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/CreditAppMaterialTheme"
+    tools:context=".Activity.Activity_ApplicationLog">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_applicationLog"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:buttonTint="@color/creditApp_headerTextColor"
+            app:titleTextColor="@color/creditApp_headerTextColor"
+            app:popupTheme="@style/ToolbarPopUpTheme_CreditApp"
+            android:theme="@style/CreditAppToolbarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Applicant Name"
+        tools:ignore="HardcodedText"
+        app:startIconDrawable="@drawable/ic_applicant_search"
+        style="@style/CreditApp_TextInputLayout"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_cap_applicant_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:maxLength="100"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_ApplicationLog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"/>
+
+</LinearLayout>

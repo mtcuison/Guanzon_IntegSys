@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activities.Activity_NotificationView"
+    android:theme="@style/NotificationLibraryMaterialTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ntf_headerTextColor">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_notificationView"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/NotificationToolbarTheme"
+        app:popupTheme="@style/ToolbarPopUpTheme_Notification"
+        app:titleTextColor="@color/ntf_headerTextColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/lbl_ntf_messageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash count request"
+            android:textColor="@color/ntf_editTextColor"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="10dp"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="From :"
+                android:textColor="@color/ntf_colorAccent"
+                android:fontFamily="@font/roboto_regular"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/lbl_ntf_messageSender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="johnDoeEmail@gmail.com"
+                android:textColor="@color/ntf_editTextColor"
+                android:fontFamily="@font/roboto_medium"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:text="Date :"
+                android:textColor="@color/ntf_colorAccent"
+                android:fontFamily="@font/roboto_regular"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/lbl_ntf_messageDateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="December 17, 2019 10:12 AM"
+                android:textColor="@color/ntf_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/ntf_editTextColor"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_ntf_messageBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="25dp"
+                    android:text="Some Windows apps configure themselves to automatically start whenever Windows boots. But you can make any app, file, or folder start with ..."
+                    android:textColor="@color/ntf_editTextColor"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/ntf_editTextColor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_Reply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="Reply"
+            android:textColor="@color/ntf_colorAccent"
+            tools:ignore="HardcodedText,NestedWeights"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_ntf_reply"
+            app:iconGravity="textStart"
+            app:iconTint="@color/ntf_editTextHintColor"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cashCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="Cash Count"
+            android:textColor="@color/ntf_colorAccent"
+            tools:ignore="HardcodedText"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_ntf_cash_register"
+            app:iconGravity="textStart"
+            app:iconTint="@color/ntf_editTextHintColor"/>
+
+    </LinearLayout>
+</LinearLayout>

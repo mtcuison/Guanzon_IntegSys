@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="CreditAppMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/creditApp_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/creditApp_colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/creditApp_windowBackground</item>
+        <item name="colorAccent">@color/creditApp_colorAccent</item>
+        <item name="android:textColorHint">@color/creditApp_editTextHintColor</item>
+    </style>
+
+    <style name="CreditAppToolbarTheme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:background">@color/creditApp_colorPrimary</item>
+        <item name="colorControlNormal">@color/creditApp_headerTextColor</item>
+    </style>
+
+    <style name="ToolbarPopUpTheme_CreditApp" parent="@style/Widget.MaterialComponents.PopupMenu">
+        <item name="android:contextPopupMenuStyle" tools:targetApi="n">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
+        <item name="android:background" tools:targetApi="lollipop">@color/creditApp_colorPrimary</item>
+    </style>
+
+    <style name="CreditAppInputField">
+        <item name="android:maxLines">1</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/roboto_regular</item>
+    </style>
+
+    <style name="CreditApp_TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/FormHint</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="hintTextColor">@color/creditApp_colorAccent</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="FormHint">
+        <item name="android:textColor">@color/creditApp_colorAccent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/roboto_regular</item>
+    </style>
+
+    <style name="CounterTextAppearrance">
+        <item name="android:textColor">@color/creditApp_editTextHintColor</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_thin</item>
+    </style>
+
+    <style name="CreditAppButtonPrevious" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/creditApp_colorAccent</item>
+        <item name="elevation">3dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_medium</item>
+        <item name="android:textColor">@color/creditApp_editTextColor</item>
+    </style>
+
+    <style name="CreditAppButtonNext" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/creditApp_colorAccent</item>
+        <item name="elevation">3dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:paddingRight">40dp</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_medium</item>
+        <item name="android:textColor">@color/creditApp_editTextColor</item>
+    </style>
+
+    <style name="Cap_TextButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#C7C7C7</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="elevation">3dp</item>
+        <item name="android:textColor">@color/creditApp_editTextColor</item>
+    </style>
+</resources>

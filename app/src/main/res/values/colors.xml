@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="integsys_colorPrimary">#1b1b1b</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F88222</color>
+    <color name="windowBakcground">#121212</color>
+    <color name="textColorPrimary">#E2E2E2</color>
+    <color name="buttonColorPrimary">#F47420</color>
+    <color name="listViewColor">#181818</color>
+    <color name="cardViewBackgroungDark">#202020</color>
+    <color name="CollectionCardViewBackgroungDark">#191919</color>
+
+    <!--Secondary Colors-->
+    <color name="textColorPrimaryDark">#101010</color>
+
+    <color name="credit_App_headers">#3b3b3b</color>
+</resources>

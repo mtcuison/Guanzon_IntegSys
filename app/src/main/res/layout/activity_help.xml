@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_help"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:theme="@style/MaterialTheme.IntegSys"
+            app:popupTheme="@style/ToolbarPopUpTheme"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout_help"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:tabBackground="@color/colorPrimary"
+            app:tabTextColor="@color/textColorPrimary"
+            app:tabIndicator="@drawable/selection_dashboard_tab"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorHeight="3.5dp"
+            app:tabIndicatorFullWidth="true"
+            app:tabGravity="fill"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <org.rmj.androidprojects.guanzongroup.g3creditapp.Etc.NonSwipeableViewPager
+        android:id="@+id/viewpager_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

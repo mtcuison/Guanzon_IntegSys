@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.rmj.androidprojects.guanzongroup.g3creditapp">
+
+    <application>
+        <activity android:name=".Activity.Activity_InformationCI"
+            android:screenOrientation="portrait"
+            android:theme="@style/CreditAppMaterialTheme"
+            tools:ignore="InnerclassSeparator"/>
+        <activity
+            android:name=".Activity.Activity_IntroductoryQuestion"
+            android:screenOrientation="portrait"
+            android:theme="@style/CreditAppMaterialTheme"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.Activity_ApplicationLog"
+            android:screenOrientation="portrait"
+            android:theme="@style/CreditAppMaterialTheme"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Activity.Activity_CreditApplication"
+            android:screenOrientation="portrait"
+            android:theme="@style/CreditAppMaterialTheme"
+            android:windowSoftInputMode="adjustUnspecified"
+            tools:ignore="InnerclassSeparator" />
+
+        <provider
+            android:name="org.rmj.g3appdriver.utils.G3AppFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

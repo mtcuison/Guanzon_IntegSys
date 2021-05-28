@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="40dp"
+    android:paddingLeft="40dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    tools:ignore="RtlSymmetry">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/cb_cap_propertyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Television"
+            tools:ignore="HardcodedText"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/creditApp_editTextColor"
+            tools:targetApi="jelly_bean" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#2B2B2B"
+        app:cardCornerRadius="15dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:cardMaxElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/lbl_creditApp_dialogMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are you sure you want to exit Credit App?"
+                tools:ignore="HardcodedText"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:fontFamily="@font/roboto_regular"
+                tools:targetApi="jelly_bean"
+                android:drawableLeft="@drawable/ic_dialog_message_box_warning"
+                android:drawableStart="@drawable/ic_dialog_message_box_warning"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dialog_positiveButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:fontFamily="@font/roboto_regular"
+                    android:backgroundTint="@color/creditApp_colorAccent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#121214"
+                    tools:targetApi="lollipop"
+                    tools:ignore="HardcodedText"
+                    app:cornerRadius="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_dialog_negativeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:fontFamily="@font/roboto_regular"
+                    android:backgroundTint="@color/creditApp_colorAccent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#121214"
+                    tools:targetApi="lollipop"
+                    tools:ignore="HardcodedText"
+                    app:cornerRadius="10dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

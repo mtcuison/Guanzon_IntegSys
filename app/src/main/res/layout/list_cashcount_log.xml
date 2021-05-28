@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:padding="15dp">
+
+    <ImageView
+        android:layout_weight="1.8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_cash_register"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"/>
+
+    <LinearLayout
+        android:layout_weight=".2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/lbl_logTransnox"
+                android:layout_weight=".8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0987557909754"
+                android:fontFamily="@font/roboto_black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/lbl_logEntryDate"
+                android:layout_weight="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="09 Sept 2019"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="3dp">
+
+            <TextView
+                android:layout_weight=".3"
+                android:id="@+id/lbl_logRequestName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cuison, Bernard Ramos"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <ImageView
+                android:id="@+id/img_logStatus"
+                android:layout_weight="1.7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_checked"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lbl_logEntryTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11:30 pm"
+            android:fontFamily="@font/roboto_regular" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/lbl_list_cap_productModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click 150"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/creditApp_editTextColor"
+        android:textSize="16sp"
+        tools:targetApi="jelly_bean" />
+
+    <TextView
+        android:id="@+id/lbl_list_cap_productBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click 150"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/creditApp_editTextHintColor"
+        android:textSize="13sp"
+        android:layout_marginTop="3dp"
+        tools:targetApi="jelly_bean" />
+
+</LinearLayout>

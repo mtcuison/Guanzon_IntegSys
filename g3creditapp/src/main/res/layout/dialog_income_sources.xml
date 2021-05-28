@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#E7E7E7"
+        app:cardCornerRadius="15dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Means Info"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_medium"
+                tools:ignore="HardcodedText"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:background="@color/creditApp_editTextColor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please select the source of income of client. If client doesn't have any source of income you can skip this area."
+                android:textColor="@color/creditApp_editTextColor"
+                android:gravity="center"
+                tools:ignore="HardcodedText"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note : First selected source of income will be set as primary source."
+                android:textColor="@color/creditApp_editTextColor"
+                android:gravity="center"
+                tools:ignore="HardcodedText"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_employed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Employed"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_self_employed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self-Employed"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_finance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Finance"
+                        tools:ignore="HardcodedText" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_pension"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pension"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dialog_incomeSourceOkay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CreditAppButtonPrevious"
+                android:text="Okay"
+                tools:ignore="HardcodedText"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dialog_incomeSourceSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap here to skip."
+                android:textColor="#AF0F0F"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:fontFamily="@font/roboto_regular"
+                android:textAllCaps="false"
+                tools:ignore="HardcodedText"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

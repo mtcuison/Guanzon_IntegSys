@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ApplicantInfo.CI_SpouseInfo"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Applicant's Information"
+                android:textColor="@color/creditApp_colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText,RtlSymmetry"
+                android:paddingStart="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Name : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Doe John, Mis"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Gender : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applGender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Male"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Civil Status : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_cvlStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Single"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Present Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applcurrentAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="#231 Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Permanent Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applprmntAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="#231 Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Contact : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applContact"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="09171870011"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Birth Date : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applBrthDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="December 18, 1990"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Birth Place : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applBrthPlace"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Dagupan, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Mother's Name : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applMtherName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Mis, Celine Doe"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applMthrAddrss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Father's Name : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applFthrName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Doe, Romeo Alcantara"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applFthrAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Employment Information"
+                android:textColor="@color/creditApp_colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText,RtlSymmetry"
+                android:paddingStart="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_employment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Employment : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applEmpStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Private"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Company : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applCompName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Guanzon Group of Companies"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applCompAdd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Telephone No. : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applCompTelNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="513 - 2908"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Length of Service : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applLngthSrvc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="2 Years"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Gross Monthly Pay : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applMnthlyPay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="00,000"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Employment Status: "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applJobStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Regular Employee"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Position : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applJobPosition"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="IT Associate"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Business Information"
+                android:textColor="@color/creditApp_colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="16sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText,RtlSymmetry"
+                android:paddingStart="5dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_bussiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Nature of Business : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applNtrBuss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Backyard Farm"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Address : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applBussAddrss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Perez Blvd., Dagupan City, Pangasinan"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Telephone No. : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText,TooManyViews" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applBussTelNo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="513 - 2908"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Years in Business : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText,TooManyViews" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applBussYrInBuss"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="Years"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Gross Monthly Income : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applGrssIncm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="00,000"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp"
+                        tools:ignore="UselessParent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:text="Other Source of Income : "
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/lbl_review_applOthrIncm"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N/A"
+                            android:fontFamily="@font/roboto_regular"
+                            android:textColor="@color/creditApp_colorPrimaryDark"
+                            tools:targetApi="jelly_bean"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

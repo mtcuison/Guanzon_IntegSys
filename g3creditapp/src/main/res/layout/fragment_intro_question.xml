@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Other.Fragment_IntroQuestion"
+    android:orientation="vertical"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F88222"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="@string/header_creditApp_introQuestion"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:text="Application For :"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_applicationType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:text="Customer Type :"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_cap_customerType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        tools:ignore="RtlSymmetry"/>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_branch"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Branch"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txt_cap_branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                        android:maxLength="100"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:nextFocusForward="@id/txt_cap_Brand"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_brand"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Brand"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txt_cap_Brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                        android:maxLength="20"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:nextFocusForward="@id/txt_cap_model"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_model"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txt_cap_model"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textAutoComplete|textAutoCorrect|textCapWords"
+                        android:imeOptions="actionNext"
+                        android:nextFocusForward="@id/txt_cap_downpayment"
+                        android:maxLength="50"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOTE : ₱1,800.00 Mc Registration fee is not included on down payment being shown below"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#EE2B2B"
+                    tools:ignore="HardcodedText"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_downpayment"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Downpayment"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_cap_downpayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:imeOptions="actionDone"
+                        android:maxLength="20"
+                        android:drawableLeft="@drawable/ic_philippine_peso"
+                        android:drawableStart="@drawable/ic_philippine_peso"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:text="Installment Term :"
+                        tools:ignore="HardcodedText"
+                        android:textColor="@color/creditApp_editTextColor"
+                        android:fontFamily="@font/roboto_medium"
+                        tools:targetApi="jelly_bean"
+                        android:padding="10dp"/>
+
+                    <Spinner
+                        android:id="@+id/txt_cap_creditTerm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3"
+                        android:imeOptions="actionDone"
+                        android:inputType="textAutoComplete|textAutoCorrect"
+                        android:padding="10dp"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_monthlyPayment"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monthly Payment"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_cap_monthlyPayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:enabled="false"
+                        android:drawableLeft="@drawable/ic_philippine_peso"
+                        android:drawableStart="@drawable/ic_philippine_peso"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/creditApp_editTextColor"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_intro_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_next"
+                    style="@style/CreditAppButtonNext"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

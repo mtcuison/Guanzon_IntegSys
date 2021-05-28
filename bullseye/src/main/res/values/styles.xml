@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="BullsEyeMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/bullsEye_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/bullsEye_colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/bullsEye_windowBackground</item>
+        <item name="colorAccent">@color/bullsEye_colorAccent</item>
+        <item name="android:textColorHint">@color/bullsEye_editTextHintColor</item>
+        <item name="android:textColor">@color/bullsEye_textColorPrimary</item>
+    </style>
+
+    <style name="BullsEyeToolbarTheme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:background">@color/bullsEye_colorPrimary</item>
+    </style>
+
+    <style name="ToolbarPopUpTheme_BullsEye" parent="@style/Widget.MaterialComponents.PopupMenu">
+        <item name="android:contextPopupMenuStyle" tools:targetApi="n">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
+        <item name="android:background" tools:targetApi="lollipop">@color/bullsEye_colorPrimary</item>
+    </style>
+</resources>

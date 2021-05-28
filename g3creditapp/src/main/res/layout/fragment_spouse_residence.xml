@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Spouse.Fragment_SpouseResidence"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F88222"
+                    android:fontFamily="@font/roboto_medium"
+                    android:padding="10dp"
+                    android:text="SPOUSE RESIDENCE INFO"
+                    android:textColor="@color/creditApp_headerTextColor"
+                    android:textSize="20sp"
+                    tools:targetApi="jelly_bean"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/creditApp_infoHeaderBackground">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        android:text="@string/header_creditApp_presentAddress"
+                        android:textColor="@color/creditApp_headerTextColor"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_cap_livingWithSpouse"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:buttonTint="@color/creditApp_headerTextColor"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Living with spouse"
+                        android:textColor="@color/creditApp_headerTextColor"
+                        tools:ignore="HardcodedText"
+                        tools:targetApi="lollipop" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_residenceLandM"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_creditApp_landmark"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_spsResidenceLandM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:digits="@string/free_text_restriction"
+                        android:maxLength="100"
+                        android:nextFocusForward="@id/tie_cap_spsHouseNo" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_applHouseNo"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".6"
+                        android:hint="@string/hint_creditApp_houseNo"
+                        android:textColorHint="@color/creditApp_colorAccent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_spsHouseNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number|none"
+                            android:maxLength="4"
+                            android:nextFocusForward="@id/tie_cap_spsRsdnSittio" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_rsdnSittio"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:hint="Phase #/Lot#/Sitio"
+                        android:textColorHint="@color/creditApp_colorAccent"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_spsRsdnSittio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:digits="@string/free_text_restriction"
+                            android:maxLength="50"
+                            android:nextFocusForward="@id/tie_cap_rsdnProvince" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_cap_rsdnStreet"
+                        style="@style/CreditApp_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:hint="@string/hint_creditApp_street"
+                        android:textColorHint="@color/creditApp_colorAccent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tie_cap_spsRsdnStreet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName"
+                            android:digits="@string/free_text_restriction"
+                            android:maxLength="50"
+                            android:nextFocusForward="@id/tie_cap_spsRsdnProvince" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_spsRsdnProvince"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_creditApp_province"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tie_cap_spsRsdnProvince"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPostalAddress"
+                        android:nextFocusForward="@id/tie_cap_spsRsdnTown"
+                        android:maxLength="20"
+                        android:padding="14dp"
+                        android:maxLines="1"
+                        android:completionThreshold="1"
+                        tools:ignore="LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_spsRsdnTown"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_creditApp_town"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tie_cap_spsRsdnTown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPostalAddress"
+                        android:nextFocusForward="@id/tie_cap_spsRsdnBrgy"
+                        android:maxLength="20"
+                        android:padding="14dp"
+                        android:maxLines="1"
+                        android:completionThreshold="1"
+                        tools:ignore="LabelFor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_spsRdsnBrgy"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_creditApp_barangay"
+                    android:textColorHint="@color/creditApp_colorAccent">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/tie_cap_spsRsdnBrgy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPostalAddress"
+                        android:maxLength="20"
+                        android:padding="14dp"
+                        android:maxLines="1"
+                        android:completionThreshold="1"
+                        tools:ignore="LabelFor" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_spsResidence_prevs"
+                    style="@style/CreditAppButtonPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_previous" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_spsResidence_next"
+                    style="@style/CreditAppButtonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_next" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

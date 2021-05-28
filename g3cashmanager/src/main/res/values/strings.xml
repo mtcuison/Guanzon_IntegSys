@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">g3cashmanager</string>
+
+    <string name="btn_link_to_signup">Not a member? Sign up now!</string>
+    <string name="btnForgotPassword">Forgot password?</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnSignup">Sign Up</string>
+    <string name="btnSignin">Sign In</string>
+    <string name="txtUsername">Username</string>
+    <string name="txtPassword">Password</string>
+    <string name="txtUpdatePassword">Update your password. Type your old password and confirm your new password.</string>
+    <string name="txtEnterCredentials">Please enter the following requirements</string>
+    <string name="txtGCARD">GCARD</string>
+    <string name="txtBirthday">Birthday</string>
+    <string name="txtMobilNum">Mobile Number</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtRePass">Retype Password</string>
+    <string name="txtOld">Old Password</string>
+    <string name="txtNewPass">New Password</string>
+    <string name="btnConfirm">Confirm</string>
+    <string name="txtChangePass">Change Password</string>
+    <string name="btnSetDate">Set Date</string>
+    <string name="txtLogin">LOG IN</string>
+    <string name="txtSignin">SIGN IN</string>
+    <string name="txtSignup">SIGN UP</string>
+
+    <string name="err_username">Enter Username</string>
+    <string name="err_password">Enter Password</string>
+    <string name="err_InvalidLogin">Invalid Credentials</string>
+    <string name="txtName">Full Name</string>
+
+    <!--Error Handling-->
+    <string name="err_null_input">This Field is Required</string>
+    <string name="err_lastname">Enter Lastname</string>
+    <string name="err_firstname">Enter Firstname</string>
+    <string name="err_middname">Enter Middlename</string>
+    <string name="err_email">Enter Email Address</string>
+    <string name="err_retypepass">Input passwords does not match.</string>
+    <string name="err_mobileNum">Enter Mobile Number.</string>
+    <string name="txtSuffix">Suffix</string>
+    <string name="txtMidName">MiddleName</string>
+    <string name="txtLastName">LastName</string>
+    <string name="txtFirstName">FirstName</string>
+    <string name="txtAppliName">Applicant Name</string>
+
+    <string name="btnSend">Submit cash count</string>
+    <string name="lblDate">Date: </string>
+    <string name="lblGrandTotal">Grand Total</string>
+    <string name="lblQuantity">Quantity</string>
+    <string name="lblTotal">Total</string>
+    <string name="lblBranch">Branch Code: </string>
+    <string name="lblUserID">UserID</string>
+    <string name="lblLogOut">Logout</string>
+    <string name="valueUserID">192.168.203.000</string>
+    <string name="valueDate">12/12/18</string>
+    <string name="lblOR">Official Receipt No.</string>
+    <string name="lblSI">Sales Invoice No.</string>
+    <string name="lblPR">Provisional Receipt No.</string>
+    <string name="lblCR">Collection Receipt No.</string>
+    <string name="lblRequestName">Request Name</string>
+    <string name="lblNetStatus">Status:</string>
+    <string name="lblUsername">Username</string>
+    <string name="lblCashGrandTotal">Cash Grand Total</string>
+    <string name="lblLogin">Login</string>
+    <string name="lblNetworkStatus">Network Status</string>
+    <string name="lblBranchName">Branch Name</string>
+    <string name="lblTransNox">Transaction No.</string>
+    <string name="lblEMEI">IMEI</string>
+
+    <string name="One_K">₱1000</string>
+    <string name="Five_Hundred">₱500</string>
+    <string name="Two_Hundred">₱200</string>
+    <string name="One_Hundred">₱100</string>
+    <string name="Fifty">₱50</string>
+    <string name="Twenty">₱20</string>
+    <string name="Ten">₱10</string>
+    <string name="Five">₱5</string>
+    <string name="One_Peso">₱1</string>
+    <string name="twenty_five_cents">¢25</string>
+    <string name="Ten_cents">¢5</string>
+    <string name="Five_cents">¢1</string>
+
+    <string name="lblPesoBill">Peso Bills (₱)</string>
+    <string name="lblCoinBill">Coin Bills (₱)</string>
+    <string name="lblCentavos">Centavo (¢)</string>
+    <string name="LabelTotal">Total</string>
+    <string name="LabelQuantity">Enter Quantity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

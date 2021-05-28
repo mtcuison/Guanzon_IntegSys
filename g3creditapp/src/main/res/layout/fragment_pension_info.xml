@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Income.Fragment_PensionInfo"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="top">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:text="PENSION INFORMATION"
+                android:textColor="@color/creditApp_headerTextColor"
+                tools:ignore="HardcodedText" />
+
+            <RadioGroup
+                android:id="@+id/rg_cap_pensionSector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_cap_pensionGovn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/radioHint_creditApp_government"/>
+
+                <RadioButton
+                    android:id="@+id/rb_cap_pensionPriv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/radioHint_creditApp_private"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/linear_pensionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_applPensionRange"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Range of Income"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_applPensionRange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number|none"
+                        android:maxLength="20"
+                        android:nextFocusForward="@id/tie_cap_applRetirementYr"
+                        android:drawableLeft="@drawable/ic_philippine_peso"
+                        android:drawableStart="@drawable/ic_philippine_peso"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/creditApp_editTextColor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_cap_applRetirementYr"
+                    style="@style/CreditApp_TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Retirement Year"
+                    android:textColorHint="@color/creditApp_colorAccent"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tie_cap_applRetirementYr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="number|none"
+                        android:maxLength="4"
+                        android:textColor="@color/creditApp_editTextColor"
+                        tools:ignore="LabelFor,RtlSymmetry" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:text="@string/header_creditApp_otherSrcIncm"
+                android:textColor="@color/creditApp_headerTextColor" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_applNtrIncm"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_ntrIncome"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_applNtrIncm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="50"
+                    android:nextFocusForward="@id/tie_cap_applOthrRangeIncm"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="RtlSymmetry" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cap_applOthrRangeIncm"
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_creditApp_rngeOfIncome"
+                android:textColorHint="@color/creditApp_colorAccent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_applOthrRangeIncm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number|none"
+                    android:maxLength="20"
+                    android:drawableLeft="@drawable/ic_philippine_peso"
+                    android:drawableStart="@drawable/ic_philippine_peso"
+                    android:drawablePadding="5dp"
+                    android:textColor="@color/creditApp_editTextColor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="bottom">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_pension_prevs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CreditAppButtonPrevious"
+                    android:text="@string/btn_creditApp_previous"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_pension_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/CreditAppButtonNext"
+                    android:text="@string/btn_creditApp_next"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

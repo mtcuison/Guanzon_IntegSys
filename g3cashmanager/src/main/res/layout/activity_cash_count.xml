@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_CashCounter"
+    android:orientation="vertical"
+    android:theme="@style/MaterialTheme.CashCount">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_cashCounter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/MaterialTheme.PopupOverlay"
+            app:popupTheme="@style/MaterialTheme.PopupOverlay"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2">
+
+        <!--Branch Code and Branch Name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/Orange"
+                android:layout_marginHorizontal="5dp"
+                style="@style/TextInputLayout.CashCount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtBranchCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Orange"
+                    android:drawableLeft="@drawable/ic_branch_code"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/lblBranch"
+                    android:textColor="@color/White"
+                    android:textColorHint="@color/Orange"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/Orange"
+                android:layout_marginHorizontal="5dp"
+                style="@style/TextInputLayout.CashCount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtBranchName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Orange"
+                    android:drawableLeft="@drawable/ic_building"
+                    android:drawablePadding="10dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/lblBranchName"
+                    android:textColor="@color/White"
+                    android:textColorHint="@color/Orange"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!--Internet Status And Date Label-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/Orange"
+                android:layout_marginHorizontal="5dp"
+                style="@style/TextInputLayout.CashCount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lblNetStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Orange"
+                    android:textSize="12sp"
+                    android:textColor="@color/White"
+                    android:hint="@string/lblNetworkStatus"
+                    android:textColorHint="@color/Orange"
+                    android:drawableLeft="@drawable/ic_connected"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:enabled="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/Orange"
+                android:layout_marginHorizontal="5dp"
+                style="@style/TextInputLayout.CashCount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lblDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Orange"
+                    android:textSize="12sp"
+                    android:textColor="@color/White"
+                    android:hint="@string/lblDate"
+                    android:textColorHint="@color/Orange"
+                    android:drawableLeft="@drawable/ic_cc_calendar"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:layout_marginHorizontal="5dp">
+
+                    <!--Label-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblPesoBill"
+                        android:textAlignment="center"
+                        android:textColor="@color/Orange"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/One_K"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="@string/LabelQuantity"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtOneThousanBill"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:backgroundTint="@color/White"
+                                android:inputType="number|none"
+                                android:textAlignment="center"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            android:hint="@string/LabelTotal"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:id="@+id/totOneThousan"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--FiveHundred-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Five_Hundred"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="@string/LabelQuantity"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtFiveHundred"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:backgroundTint="@color/Orange"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totFiveHundred"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--TwoHundred-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Two_Hundred"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtTwoHundred"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totTwoHundred"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--OneHundred-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/One_Hundred"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtOneHundred"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totOneHundred"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Fifty-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Fifty"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtFifty"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totFifty"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:backgroundTint="@color/White"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:hint="@string/LabelTotal"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center"
+                                android:textColor="@color/White"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Twenty-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Twenty"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtTwenty"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totTwenty"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    android:layout_marginHorizontal="5dp">
+
+                    <!--Peso Coins-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCoinBill"
+                        android:textAlignment="center"
+                        android:textColor="@color/Orange"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <!--Ten Peso-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Ten"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtTenPeso"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totTenPeso"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Five Peso-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Five"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtFivePeso"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totFivePeso"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--One Peso-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/One_Peso"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtOnePeso"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totOnePeso"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Centavo Coins-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCentavos"
+                        android:textAlignment="center"
+                        android:textColor="@color/Orange"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <!--Twenty Five Cents-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/twenty_five_cents"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtTwentyFiveC"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totTwentyFiveC"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Ten Cents-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Ten_cents"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtTenCents"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totTenCents"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <!--Five Cents-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Five_cents"
+                            android:textColor="@color/White"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginVertical="5dp"
+                            android:gravity="center"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/Orange"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:id="@+id/txtFiveCents"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelQuantity"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="number|none"
+                                android:imeOptions="flagNoExtractUi"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textColorHint="@color/White"
+                            style="@style/TextInputLayout.CashCount">
+
+                            <EditText
+                                android:text="0"
+                                android:id="@+id/totFiveCents"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:focusedByDefault="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="14sp"
+                                android:textColor="@color/White"
+                                android:hint="@string/LabelTotal"
+                                android:backgroundTint="@color/White"
+                                android:textColorHint="@color/White"
+                                android:textAlignment="center"
+                                android:inputType="numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/txtGrandtotal"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:backgroundTint="@color/Orange"
+                        android:paddingLeft="50dp"
+                        android:hint="@string/lblGrandTotal"
+                        android:textColor="@color/White"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColorHint="@color/Orange"
+                        android:drawablePadding="10dp"/>
+
+                    <Button
+                        android:layout_gravity="center"
+                        style="@style/Widget.MaterialComponents.Button"
+                        android:id="@+id/btnContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Continue to submit window"
+                        android:background="@color/Orange"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Black"
+                        android:textAlignment="center"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginBottom="30dp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

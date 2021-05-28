@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Activity_RaffleEntry">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_vouchers"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:buttonTint="@color/creditApp_headerTextColor"
+            app:titleTextColor="@color/creditApp_headerTextColor"
+            app:popupTheme="@style/ToolbarPopUpTheme_CreditApp"
+            android:theme="@style/CreditAppToolbarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CreditApp_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Name"
+            android:textColorHint="@color/creditApp_colorAccent"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_customerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:drawablePadding="5dp"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/txt_documentNumber"
+                android:textColor="@color/creditApp_editTextColor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CreditApp_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:textColorHint="@color/creditApp_colorAccent"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_customerAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:nextFocusForward="@id/txt_documentNumber"
+                android:textColor="@color/creditApp_editTextColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CreditApp_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Town/City"
+            android:textColorHint="@color/creditApp_colorAccent"
+            tools:ignore="HardcodedText">
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_customerTown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:drawablePadding="5dp"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/txt_documentNumber"
+                android:textColor="@color/creditApp_editTextColor"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spn_documentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CreditApp_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Document Number"
+            android:textColorHint="@color/creditApp_colorAccent"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_documentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|none"
+                android:maxLength="13"
+                android:drawablePadding="5dp"
+                android:imeOptions="actionNext"
+                android:nextFocusForward="@id/txt_mobileNo"
+                android:textColor="@color/creditApp_editTextColor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/CreditApp_TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Mobile No."
+            android:textColorHint="@color/creditApp_colorAccent"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_mobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|none"
+                android:maxLength="11"
+                android:drawablePadding="5dp"
+                android:imeOptions="actionDone"
+                android:textColor="@color/creditApp_editTextColor"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_promoSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            style="@style/CreditAppButtonNext"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

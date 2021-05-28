@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guanzon Integsys</string>
+
+    <string-array name="arr_civil_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Live-In</item>
+        <item>Separated</item>
+        <item>Widowed</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_collectorName">Collector Name</string>
+    <string name="header_creditApp_ApplicantInfo">APPLICANT\'S INFORMATION</string>
+    <string name="hint_creditApp_lastName">Last Name</string>
+    <string name="hint_creditApp_firstName">First Name</string>
+    <string name="hint_creditApp_middName">Middle Name</string>
+    <string name="hint_creditApp_nickName">Nickname</string>
+    <string name="hint_creditApp_suffix">Suffix</string>
+    <string name="header_creditApp_gender">GENDER</string>
+    <string name="hint_creditApp_male">Male</string>
+    <string name="hinti_creditApp_female">Female</string>
+    <string name="header_creditApp_civilStat">CIVIL STATUS</string>
+    <string name="hint_creditApp_single">Single</string>
+    <string name="hint_creditApp_married">Married</string>
+    <string name="hint_creditApp_liveIn">Live-In</string>
+    <string name="hint_creditApp_separate">Separated</string>
+    <string name="hint_creditApp_widowed">Widowed</string>
+    <string name="header_creditApp_contact">CONTACT</string>
+    <string name="header_creditApp_presentAddress">PRESENT ADDRESS</string>
+    <string name="hint_creditApp_houseNo">House No.</string>
+    <string name="hint_creditApp_streetOrBarangay">Street/Barangay</string>
+    <string name="hint_creditApp_city">City/Municipality</string>
+    <string name="hinti_creditApp_province">Province</string>
+    <string name="hint_creditApp_MobileNo">Mobile No.</string>
+    <string name="hint_creditApp_EmailAdd">Email Address</string>
+    <string name="hint_creditApp_facebookAcc">Facebook Account</string>
+    <string name="hint_creditApp_viberAcc">Viber Account</string>
+    <string name="header_creditApp_previousAddress">PREVIOUS ADDRESS</string>
+    <string name="header_creditApp_birthPlace">BIRTH PLACE</string>
+    <string name="hint_creditApp_birthdate">Birthday</string>
+    <string name="header_creditApp_birthdayInfo">BIRTHDAY INFO</string>
+    <string name="hint_creditApp_age">Age</string>
+    <string name="header_creditApp_parentInfo">PARENT\'S INFORMATION</string>
+    <string name="header_creditApp_spouseInfo">SPOUSE INFORMATION</string>
+    <string name="hint_creditApp_lnghtStay">Length Of Stay</string>
+    <string name="header_creditApp_empDetails">EMPLOYMENT DETAILS</string>
+    <string name="hint_creditApp_compName">Company Name</string>
+    <string name="hint_creditApp_compAddress">Address</string>
+    <string name="hint_creditApp_compTelNo">Telephone No.</string>
+    <string name="hint_creditApp_compLngthService">Length Of Service</string>
+    <string name="hint_creditApp_monthlyPay">Gross Monthly Pay</string>
+    <string name="hint_creditApp_empStats">Employment Status</string>
+    <string name="hint_creditApp_empPosition">Position</string>
+    <string name="header_creditApp_selfEmployed">IF SELF-EMPLOYED</string>
+    <string name="hint_creditApp_businessNature">Nature Of Business</string>
+    <string name="hint_creditApp_busMonthlyInc">Est. Monthly Income</string>
+    <string name="hint_creditApp_bussAge">Years In Business</string>
+    <string name="hint_creditApp_otherIncome">Other Source Of Income</string>
+    <string name="btn_creditApp_previous">Previous</string>
+    <string name="btn_creditApp_next">Next</string>
+    <string name="hint_creditApp_mothername">Mother\'s Maiden Name</string>
+    <string name="hint_creditApp_fathername">Father\'s Full Name</string>
+    <string name="radioHint_creditApp_government">Government</string>
+    <string name="radioHint_creditApp_private">Private</string>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/CreditAppMaterialTheme"
+    tools:context=".Fragment.Disbursement.Fragment_Properties">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F88222"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="10dp"
+                android:text="Properties Information"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="LOT PROPERTIES"
+                android:textColor="@color/creditApp_headerTextColor"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lot 1 Address"
+                android:textColorHint="@color/creditApp_colorAccent"
+                tools:ignore="HardcodedText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_landLot1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="200"
+                    android:nextFocusForward="@id/tie_cap_landLot2"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lot 2 Address"
+                android:textColorHint="@color/creditApp_colorAccent"
+                tools:ignore="HardcodedText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_landLot2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="200"
+                    android:nextFocusForward="@id/tie_cap_landLot3"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/CreditApp_TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lot 3 Address"
+                android:textColorHint="@color/creditApp_colorAccent"
+                tools:ignore="HardcodedText">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_cap_landLot3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:digits="@string/free_text_restriction"
+                    android:maxLength="200"
+                    android:textColor="@color/creditApp_editTextColor"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="MEANS OF TRANSPORTATION"
+                android:textColor="@color/creditApp_headerTextColor"
+                tools:ignore="HardcodedText" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_4WheelVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owned a 4 wheel vehicle."
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_3WheelVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owned a 3 wheel vehicle (Ex. Tricycle)."
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_2WheelVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owned a 2 wheel vehicle (Bike, Single Motorcycle)."
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/creditApp_infoHeaderBackground"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="HOUSE HOLD APPLIANCES"
+                android:textColor="@color/creditApp_headerTextColor"
+                tools:ignore="HardcodedText" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_Aircon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aircon"
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_refrigerator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refrigerator"
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+            <CheckBox
+                android:id="@+id/cb_cap_television"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Television"
+                android:textColor="@color/creditApp_editTextColor"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                tools:targetApi="jelly_bean" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_properties_prevs"
+                    style="@style/CreditAppButtonPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_previous" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_properties_next"
+                    style="@style/CreditAppButtonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_creditApp_next" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

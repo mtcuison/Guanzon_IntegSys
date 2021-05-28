@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="NotificationLibraryMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/ntf_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/ntf_colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/ntf_windowBackground</item>
+        <item name="colorAccent">@color/ntf_colorAccent</item>
+        <item name="android:textColorHint">@color/ntf_editTextHintColor</item>
+    </style>
+
+    <style name="NotificationToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">@color/ntf_colorPrimary</item>
+        <item name="colorControlNormal">@color/ntf_headerTextColor</item>
+    </style>
+
+    <style name="ToolbarPopUpTheme_Notification" parent="@style/Widget.MaterialComponents.PopupMenu">
+        <item name="android:contextPopupMenuStyle" tools:targetApi="n">@style/Widget.MaterialComponents.PopupMenu.ContextMenu</item>
+        <item name="android:background" tools:targetApi="lollipop">@color/ntf_colorPrimary</item>
+    </style>
+</resources>

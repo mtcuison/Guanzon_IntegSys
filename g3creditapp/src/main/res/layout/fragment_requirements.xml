@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.CoMaker.Fragment_Requirements"
+    android:theme="@style/CreditAppMaterialTheme">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REQUIREMENTS"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/creditApp_headerTextColor"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#F88222"
+                tools:targetApi="jelly_bean"
+                tools:ignore="HardcodedText" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/img_creditApp_2x2applicantImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_applicant_logo"
+                        android:scaleType="fitCenter"
+                        tools:ignore="ContentDescription"
+                        android:layout_weight="1.5"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight=".5">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please upload or take at least 2x2 picture."
+                            android:fontFamily="@font/roboto_regular"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="jelly_bean" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_creditApp_applicant_uploadPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose File"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_editTextColor"
+                            android:backgroundTint="@color/creditApp_colorAccent"
+                            app:icon="@drawable/ic_image_file"
+                            app:iconTint="@color/creditApp_editTextColor"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="lollipop" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_creditApp_applicant_takePhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take Photo"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_editTextColor"
+                            android:backgroundTint="@color/creditApp_colorAccent"
+                            app:icon="@drawable/ic_camera_logo"
+                            app:iconTint="@color/creditApp_editTextColor"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="lollipop" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.5">
+
+                        <ImageView
+                            android:id="@+id/img_creditApp_1stValidID"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_id_card_image"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription"
+                            android:layout_marginBottom="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please upload or take a photo of your 2x2 picture."
+                            android:fontFamily="@font/roboto_regular"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="jelly_bean" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_creditApp_applicant_1stValidID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take Photo"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_editTextColor"
+                            android:backgroundTint="@color/creditApp_colorAccent"
+                            app:icon="@drawable/ic_camera_logo"
+                            app:iconTint="@color/creditApp_editTextColor"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="lollipop" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="2"
+                    android:padding="10dp"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1.5">
+
+                        <ImageView
+                            android:id="@+id/img_creditApp_2ndValidID"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_id_card_image"
+                            android:scaleType="fitCenter"
+                            android:adjustViewBounds="true"
+                            tools:ignore="ContentDescription"
+                            android:layout_marginTop="10dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Please upload or take a photo of your 2x2 picture."
+                            android:fontFamily="@font/roboto_regular"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="jelly_bean" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_creditApp_applicant_2ndValidID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take Photo"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_editTextColor"
+                            android:backgroundTint="@color/creditApp_colorAccent"
+                            app:icon="@drawable/ic_camera_logo"
+                            app:iconTint="@color/creditApp_editTextColor"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="lollipop" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="#F5F5F5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/img_creditApp_billsReceipt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_business_permit"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        tools:ignore="ContentDescription"
+                        android:layout_weight="1.5"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight=".5"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company ID/Payslip/Business Permit"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_marginTop="10dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="jelly_bean" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_creditApp_applicant_paperBills"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Take Photo"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/creditApp_editTextColor"
+                            android:backgroundTint="@color/creditApp_colorAccent"
+                            app:icon="@drawable/ic_camera_logo"
+                            app:iconTint="@color/creditApp_editTextColor"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_margin="5dp"
+                            tools:ignore="HardcodedText"
+                            tools:targetApi="lollipop" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_rqrmnts_prevs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cornerRadius="10dp"
+                    android:text="Review Previous Details"
+                    android:textColor="@color/creditApp_editTextColor"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:backgroundTint="@color/creditApp_colorAccent"
+                    android:layout_margin="20dp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_fragment_rqrmnts_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cornerRadius="10dp"
+                    android:text="Submit Applicantion"
+                    android:textColor="@color/creditApp_editTextColor"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:backgroundTint="@color/creditApp_colorAccent"
+                    android:layout_margin="20dp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

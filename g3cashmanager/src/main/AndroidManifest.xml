@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.rmj.g3cm.android.g3cashmanager">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity android:name=".Activity_CashCountLog"
+            android:theme="@style/MaterialTheme.CashCount"/>
+        <activity android:name=".Activity_CashCounter"
+            android:theme="@style/MaterialTheme.CashCount" />
+        <activity android:name=".Activity_CashCountSubmit"
+            android:theme="@style/MaterialTheme.CashCount" />
+    </application>
+
+</manifest>

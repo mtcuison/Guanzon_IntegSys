@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">g3msg_notifylib</string>
+
+    <!--Notification Message Templates-->
+    <!--MC SERIAL REGISTRATION-->
+    <string name="MC_REGISTRATION_STARTED"></string>
+    <string name="MC_REGISTRATION_PROCESS"></string>
+    <string name="MC_REGISTRATION_TRANSFERRED"></string>
+    <string name="MC_REGISTRATION_RECEIVED"></string>
+    <string name="MC_REGISTRATION_RELEASE"></string>
+
+    <!--Notification Message-->
+    <string name="PRE_ORDER_VERIFIED"></string>
+    <string name="PRE_ORDER_SHIPPED"></string>
+    <string name="PRE_ORDER_FORCLAIMING"></string>
+    <string name="PRE_ORDER_CLAIMED"></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">G3LoginDriver</string>
+
+    <!--Login String Values-->
+    <string name="login_email">Email</string>
+    <string name="login_pswrd">Password</string>
+    <string name="login_moble">Mobile No.</string>
+    <string name="login_btnLogin">Login Account</string>
+    <string name="login_btnRstPswrd">Forgot Password</string>
+    <string name="login_btnCrtAccnt">Create Account</string>
+    
+    <!--Forgot Password Values-->
+    <string name="pswd_provideEmail">Please provide your email that you use to confirm this account.</string>
+    <string name="pswd_btnSendEmail">Send password on email</string>
+
+    <!--Create Account Values-->
+    <string name="acct_lastName">Last Name</string>
+    <string name="acct_firstName">First Name</string>
+    <string name="acct_middName">Middle Name</string>
+    <string name="acct_suffix">Suffix</string>
+    <string name="acct_Email">Email</string>
+    <string name="acct_Password">Password</string>
+    <string name="acct_ConfirmPswd">Confirm Password</string>
+    <string name="acct_MobileNo">Mobile No.</string>
+    <string name="dialog_msg_account_confirm1">A verification message has been sent to </string>
+    <string name="dialog_msg_account_confirm2">You may enter the PIN number received on the space below to activate your account.</string>
+</resources>

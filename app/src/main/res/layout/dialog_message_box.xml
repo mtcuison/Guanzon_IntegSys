@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/textColorPrimary"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardMaxElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/lbl_dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Session Expired"
+            android:textSize="16sp"
+            android:background="@color/cardViewBackgroundDark"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/lbl_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Your last session has expired. Please login again to continue."
+            tools:ignore="HardcodedText"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/roboto_regular"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawableStart="@drawable/ic_settings"
+            android:drawablePadding="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dialog_positiveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Okay"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                tools:ignore="HardcodedText"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/colorAccent"
+                tools:targetApi="lollipop"
+                android:layout_margin="10dp"
+                android:visibility="gone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_dialog_negativeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Okay"
+                android:textColor="@color/colorPrimaryDark"
+                android:fontFamily="@font/roboto_medium"
+                tools:ignore="HardcodedText"
+                app:cornerRadius="10dp"
+                android:backgroundTint="@color/colorAccent"
+                tools:targetApi="lollipop"
+                android:layout_margin="10dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="LoginMaterialTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Original AppCompat attributes. -->
+        <item name="colorPrimary">@color/my_app_primary_color</item>
+        <item name="colorSecondary">@color/my_app_secondary_color</item>
+        <item name="android:colorBackground">@color/my_app_background_color</item>
+        <item name="colorError">@color/my_app_error_color</item>
+        <item name="editTextBackground">@color/edittTextBackground</item>
+        <item name="editTextColor">@color/textColorPrimaryDark</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_regular</item>
+        <item name="actionBarStyle">@style/CustomPopupActionbar</item>
+    </style>
+
+    <style name="CustomPopupActionbar" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorAccentLight</item>
+    </style>
+
+    <style name="textBoxAppearance" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/edittTextBackground</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="hintTextAppearance">@style/HintAppearance</item>
+    </style>
+
+    <style name="HintAppearance">
+        <item name="android:textColor">@color/edittextHintColor</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_regular</item>
+    </style>
+
+    <style name="MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/button_light</item>
+        <item name="android:textColor">@color/buttonTextColors</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_medium</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">3dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">30dp</item>
+    </style>
+
+    <style name="DialogMaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/button_light</item>
+        <item name="android:textColor">@color/buttonTextColors</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_medium</item>
+        <item name="android:layout_marginVertical" tools:targetApi="o">3dp</item>
+        <item name="android:layout_marginHorizontal" tools:targetApi="o">10dp</item>
+    </style>
+</resources>

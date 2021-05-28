@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="40dp"
+    android:paddingLeft="40dp"
+    tools:ignore="RtlSymmetry"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/lbl_cap_questions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Do you have any Appliances?"
+        android:textColor="@color/creditApp_editTextColor"
+        tools:ignore="HardcodedText"
+        tools:targetApi="jelly_bean" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_questionAnswerSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_cap_answerYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/label_creditApp_answerYes"
+            android:textColor="@color/creditApp_editTextColor"
+            tools:targetApi="jelly_bean" />
+
+        <RadioButton
+            android:id="@+id/rb_cap_answerNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/label_creditApp_answerNo"
+            android:textColor="@color/creditApp_editTextColor"
+            tools:targetApi="jelly_bean" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linear_appliances"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Select appliances which the applicant have."
+            android:textColor="@color/creditApp_editTextColor"
+            tools:ignore="HardcodedText"
+            tools:targetApi="jelly_bean" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expandableListView_enumerator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

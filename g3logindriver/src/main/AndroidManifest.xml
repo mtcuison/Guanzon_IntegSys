@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.rmj.androidprojects.guanzongroup.g3logindriver">
+
+    <application>
+
+        <activity
+            android:name=".Activity_RequestPassword"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/LoginMaterialTheme"
+            android:screenOrientation="userPortrait"/>
+        <activity android:name=".Activity_CreateAccount"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/LoginMaterialTheme"
+            android:screenOrientation="userPortrait"/>
+        <activity
+            android:name=".Activity_Login"
+            android:theme="@style/LoginMaterialTheme"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="userPortrait"/>
+    </application>
+
+</manifest>

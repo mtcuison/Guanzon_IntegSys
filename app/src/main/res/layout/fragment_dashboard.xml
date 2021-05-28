@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.MainMenu.Fragment_DashBoard"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            tools:targetApi="o">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_Bullseye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_dashboard_bar_chart"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Area Monitoring"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Performance monitoring for motorcycle branches."
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_credit_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_dashboard_credit_application"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Credit Application"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Apply Loan for motorcycle"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_CreditApplications_List"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="NestedWeights,PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_draft"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Credit Applications List"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="View recent list of credit application"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_DCP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="NestedWeights,PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_voucher"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Vouchers"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Vouchers and Promos"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                tools:ignore="UselessLeaf">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_CashCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_cash_register"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Cash Register"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Submit Daily Cash Count or Old Cash Count"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardView_Draft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="210dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/cardViewBackgroungDark"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="1dp"
+                    app:cardMaxElevation="@dimen/cardview_default_elevation"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    tools:ignore="NestedWeights,PrivateResource">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="3dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".7"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/ic_server"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="CashCount Log"
+                                android:textSize="16sp"
+                                tools:ignore="HardcodedText" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="5dp"
+                                android:background="@color/colorAccent" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="View recent sent and unsent cash counts."
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mLbl_BuildVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="Build Version. 1.0.1 - 1Vc."
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp"
+                tools:ignore="HardcodedText,Sm allSp" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Activity_Branch"
+    android:theme="@style/BullsEyeMaterialTheme"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_bullseye_branch"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:theme="@style/BullsEyeToolbarTheme"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/lbl_header_branchMonitoring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Branch Performance Monitoring"
+        android:padding="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="15dp"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchar_branch_performance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_branchlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
